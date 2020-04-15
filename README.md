@@ -20,9 +20,10 @@ This model trained with [140317 names](./train.csv) from 18 nationality/ethnics:
 - Turkish
 - Indonesia
 - Vietnam
+- Czech
 
 # Result
-For testing, we use 35080 mix names from available countries. Using `evaluation.py` we get 96.22% accuracy
+For testing, we use 35080 mix names from available countries. Using `evaluation.py` we get 96.25% accuracy
 
 # Confusion Matrix
 ![Confusion Matrix](./conf_matrix.png)
