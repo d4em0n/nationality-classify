@@ -32,14 +32,17 @@ X_test = sequence.pad_sequences(tokenizer.texts_to_sequences(data['nama']), 42, 
 #X_test = np.expand_dims(X_test, axis=2)
 Y_test = data['country'].values
 
-json_file = open('model2.json', 'r')
+json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 # load weights into new model
-loaded_model.load_weights("model2.h5")
-
+loaded_model.load_weights("model.h5")
+loaded_model.save_model("model2.h5")
+print("Saved model to disk")
+"""
 loaded_model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['acc',f1_m,precision_m, recall_m])
 score = loaded_model.evaluate(X_test, Y_test)
 print("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
 print(score)
+"""
