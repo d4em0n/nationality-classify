@@ -7,11 +7,11 @@ import pickle
 import string
 import sys
 
-json_file = open('model2.json', 'r')
+json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
-loaded_model.load_weights("model2.h5")
+loaded_model.load_weights("model.h5")
 
 loaded_model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
