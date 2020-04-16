@@ -27,3 +27,6 @@ For testing, we use 35080 mix names from available countries. Using `evaluation.
 
 # Confusion Matrix
 ![Confusion Matrix](./conf_matrix.png)
+
+# Demo
+https://d4em0n.github.io/
